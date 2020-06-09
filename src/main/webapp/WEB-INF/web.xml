@@ -7,6 +7,19 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
+    <listener>
+        <listener-class>com.freeefly.MyListener</listener-class>
+    </listener>
+    <filter>
+        <filter-name>myFilter</filter-name>
+        <filter-class>com.freeefly.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>myFilter</filter-name>
+        <servlet-name>hello</servlet-name>
+    </filter-mapping>
+
+
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>com.freeefly.HelloServlet</servlet-class>
